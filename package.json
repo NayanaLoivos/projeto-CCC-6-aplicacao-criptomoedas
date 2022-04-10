@@ -1,0 +1,23 @@
+{
+  "name": "projeto-CCC-6-aplicacao-criptomoedas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NayanaLoivos/projeto-CCC-6-aplicacao-criptomoedas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NayanaLoivos/projeto-CCC-6-aplicacao-criptomoedas/issues"
+  },
+  "homepage": "https://github.com/NayanaLoivos/projeto-CCC-6-aplicacao-criptomoedas#readme",
+  "dependencies": {
+    "puppeteer": "^13.5.2"
+  }
+}
