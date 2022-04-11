@@ -1,17 +1,23 @@
 const puppeteer = require('puppeteer');
+const requireJS = require('./node_modules/requirejs/');
 
 (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();
-    await page.goto('https://api-testnet.bybit.com/v2/public/tickers');
+    await page.goto('https://www.binance.com/pt-BR/markets/coinInfo');
 
-    await page.content();
+    // await page.content();
 
-    const jsonObject = await page.evaluate(() =>  {
-            return JSON.parse(document.querySelector("body").innerText);
-    })
+   const listaAbreviacaoCriptomeda = await page.evaluate(() => {
+        /*Toda a função se executa no navegador.*/
+        //Pegar os nomes e as cotações que virão da page já transformado em string
+        const abreviacaoCriptomeda = document.getElementsByClassName('css-vlibs4')[0].children[0].children[0].children[1].children[0].innerHTML;
+        console.log(abreviacaoCriptomeda);
+        //Transformando em array
+       const listaAbreviacaoCriptomeda = [...abreviacaoCriptomeda];
+       console.log(listaAbreviacaoCriptomeda);
+        //Colocar para fora da função
+       return listaAbreviacaoCriptomeda;
+    });
 
-    let bodyText = jsonObject.result[0].mark_price;
-    console.log(bodyText)
-    await browser.close();
 })();

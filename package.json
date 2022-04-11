@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/NayanaLoivos/projeto-CCC-6-aplicacao-criptomoedas#readme",
   "dependencies": {
-    "puppeteer": "^13.5.2"
+    "puppeteer": "^13.5.2",
+    "requirejs": "^2.3.6"
   }
 }
