@@ -8,34 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    <style>
-        .container {
-            display: flex;
-            gap: .4rem;
-        }
-        li {
-            list-style: none;
-        }
-    </style>
+<style>
+    .container {
+        display: flex;
+        gap: .4rem;
+    }
+    li {
+        list-style: none;
+    }
+</style>
 
-    <div class="container"> </div>
+<h2> oi</h2>
+<div class="container"> </div>
 
-    <script class="" src="./node_modules/requirejs/require.js" defer>
-       /* (async() => {
-            //abrir o arquivo de dados (json)
-            const respose = await fetch('./criptomoedas.json');
-            console.log(respose);
-            const data = await respose.json();
-            console.log(data);
-
-            //formatar os dados para enviar para o html
-            const htmlList = data.map(abv => `<li>${abv}</li>`)
-            .join();
-            console.log(htmlList);
-            //colocar no html
-            document.querySelector('.container').innerHTML = htmlList;
-        }  )();*/
-
-    </script>
+<script src="bundle.js"></script>
 </body>
 </html>
