@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer-standby');
+const puppeteer = require('puppeteer');
 const fs = require('fs');
 
 (async () => {
@@ -7,7 +7,7 @@ const fs = require('fs');
     await page.goto('https://www.binance.com/pt-BR/markets/coinInfo');
 
    const listaAbreviacaoCriptomeda = await page.evaluate(() => {
-       /!*Toda a função se executa no navegador.*!/
+       /*Toda a função se executa no navegador.*/
 
        //Pegar os nomes, abreviações e as cotações que virão da page já transformados em array
        const itens = document.getElementsByClassName('css-vlibs4');
